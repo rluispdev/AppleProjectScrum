@@ -39,9 +39,9 @@ struct MeetingView: View {
             
             HStack {
                 Text("Speaker 1 of 3")
-                
+                Spacer()
                 Button(action: {}) {
-                    Image(systemName: "foward.fill")
+                    Image(systemName: "forward.fill")
                 }
                 .accessibilityLabel("Next speaker")
             }
