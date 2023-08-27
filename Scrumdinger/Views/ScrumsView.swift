@@ -16,9 +16,24 @@ struct ScrumsView: View {
   
     var body: some View {
         
-        List(scrums) { scrum in
-            CardView(scrum: scrum)
+        //Configurando a navegação entre as telas.
+        NavigationStack {
+            List(scrums) { scrum in
+                
+                NavigationLink(destination:  Text(scrum.title)) {
+                    CardView(scrum: scrum)
+                        
+                }
                 .listRowBackground(scrum.theme.mainColor)
+            }
+            .navigationTitle("Daily Scrums")
+            
+            .toolbar {
+                Button(action: {}) {
+                   Image(systemName: "plus")
+                }
+                .accessibilityLabel("New Scrum")
+            }
         }
     }
 }
