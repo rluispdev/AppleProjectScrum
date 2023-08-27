@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+//Enum de cores criadas no Assets
+
 enum Theme: String {
     case bubblegum
     case buttercup

@@ -7,6 +7,9 @@
 
 import Foundation
 
+
+// Para uso do usuário, usamos o Identifiable para obter uma maneira mais robusta de comunicar a  id.
+
 struct DailyScrum: Identifiable {
     let id: UUID
     var title: String
@@ -22,6 +25,8 @@ struct DailyScrum: Identifiable {
         self.theme = theme
     }
 }
+
+//Inicialização de Dados de Exemplo
 
 extension DailyScrum {
     static let sampleData: [DailyScrum] =

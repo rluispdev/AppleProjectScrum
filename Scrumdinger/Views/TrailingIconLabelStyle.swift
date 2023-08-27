@@ -7,7 +7,10 @@
 
 import SwiftUI
 
+// Peersonalizando o estilo da label.
+
 struct TrailingIconLabelStyle: LabelStyle {
+    
     func makeBody(configuration: Configuration) -> some View {
         HStack {
             configuration.title

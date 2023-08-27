@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+//Criando, modificando e customizando a View
+
 struct MeetingView: View {
     var body: some View {
         
