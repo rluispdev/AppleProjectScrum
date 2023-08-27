@@ -17,7 +17,7 @@ struct ScrumsView: View {
     var body: some View {
         
         //Configurando a navegação entre as telas.
-        NavigationStack {
+        
             List(scrums) { scrum in
                 
                 NavigationLink(destination: DetailView(scrum: scrum)) {
@@ -34,12 +34,13 @@ struct ScrumsView: View {
                 }
                 .accessibilityLabel("New Scrum")
             }
-        }
     }
 }
 
 struct ScrumsView_Previews: PreviewProvider {
     static var previews: some View {
-        ScrumsView(scrums: DailyScrum.sampleData)
+        NavigationStack {
+            ScrumsView(scrums: DailyScrum.sampleData)
+        }
     }
 }
