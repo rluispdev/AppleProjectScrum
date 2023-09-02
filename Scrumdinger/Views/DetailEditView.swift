@@ -55,6 +55,8 @@ struct DetailEditView: View {
 
 struct DetailEditView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailEditView()
+        
+            DetailEditView()
+        
     }
 }
