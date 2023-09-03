@@ -9,7 +9,7 @@ import SwiftUI
 
 //Enum de cores criadas no Assets
 
-enum Theme: String {
+enum Theme: String, CaseIterable, Identifiable {
     
     case bubblegum
     case buttercup
@@ -42,5 +42,9 @@ enum Theme: String {
     // Colocando o nome das cores com Incial Maiuscula
     var name: String {
         rawValue.capitalized
+    }
+    
+    var id: String {
+        name
     }
 }
