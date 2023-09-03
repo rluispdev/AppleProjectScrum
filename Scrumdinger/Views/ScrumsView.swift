@@ -12,15 +12,16 @@ import SwiftUI
 //Essa View exibe uma lista de scrums diários
 
 struct ScrumsView: View {
-    let scrums: [DailyScrum]
+    @Binding var scrums: [DailyScrum]
+    
   
     var body: some View {
         
         //Configurando a navegação entre as telas.
         
-            List(scrums) { scrum in
+            List($scrums) { $scrum in
                 
-                NavigationLink(destination: DetailView(scrum: scrum)) {
+                NavigationLink(destination: DetailView(scrum: $scrum)) {
                     CardView(scrum: scrum)
                         
                 }
@@ -40,7 +41,7 @@ struct ScrumsView: View {
 struct ScrumsView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            ScrumsView(scrums: DailyScrum.sampleData)
+            ScrumsView(scrums:.constant(DailyScrum.sampleData))
         }
     }
 }
